@@ -39,9 +39,9 @@ The Data Model of the Tenda Application:
 
 The Mockups of the Tenda Application:
 
-![Tenda App](./Project-Design-Templates/Tenda-App.png)
-
 ![Login Feature](./Project-Design-Templates/Login.jpeg)
+
+![Tenda App](./Project-Design-Templates/Tenda-App.png)
 
 <!-- Features and Functionalities-->
 

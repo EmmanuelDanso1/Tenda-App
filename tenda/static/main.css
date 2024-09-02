@@ -19,15 +19,19 @@ h1, h2, h3, h4, h5, h6 {
 .bg-steel {
   background-color: #5f788a;
 }
+.navbar-text:hover  {
+  color: #ffffff;
+  cursor: pointer;
+}
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
 }
 
-.site-header .navbar-nav .nav-link:hover {
+.site-header .navbar-nav  .nav-link:hover {
   color: #ffffff;
 }
 
-.site-header .navbar-nav .nav-link.active {
+.site-header .navbar-nav .navbar-text .nav-link.active {
   font-weight: 500;
 }
 .content-section {

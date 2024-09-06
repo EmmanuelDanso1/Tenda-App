@@ -49,9 +49,10 @@
                 {{ form.submit(class="btn btn-outline-info") }}
                 
             </div><br>
-            <!-- forgotten password -->
+            <!-- forgotten password? click to reset -->
              <div class="text-muted ml-2">
-                <a href="#">Forgot password?</a>
+                Forgot password?
+                <a href="{{ url_for('reset_password_request') }}">Click to Reset it </a>
              </div>
         </form>
         <div class=" pt-3">

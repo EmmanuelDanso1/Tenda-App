@@ -57,7 +57,7 @@ The Mockups of the Tenda Application:
 
 - Ability to test solution without providing personal details.
 
-<!--Technologies used-->
+<!--Technologies Used-->
 
 ## 🛠 Technologies
 
@@ -86,7 +86,7 @@ The Tenda Application is built using:
 
 - [Live Demo Link]()
 
-<!--Roadmap and future enhancements-->
+<!--Roadmap and Future Enhancements-->
 
 ## 🔭 Future Enhancements
 

@@ -1,0 +1,89 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="content-section container">
+        <form action="" method="POST">
+            <!-- this enbales crsf -->
+            {{ form.hidden_tag() }}
+            <legend class=" mb-4 text-center">Sign Up to Tenda</legend>
+            <fieldset class="form-group">
+                <div class="form-group">
+                    <!-- label -->
+                    {{ form.name.label(class="form-control-label") }}
+                    <!-- input field -->
+                    <!-- print out errors for wrong input -->
+                    {% if form.name.errors %}
+                     {{ form.name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors  %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="form-control form-control-lg") }}
+                    {% endif  %}
+                </div>
+                <div class="form-group">
+                    <!-- label -->
+                    {{ form.email.label(class="form-control-label") }}
+                    <!-- input field -->
+                    <!-- print out errors for wrong input -->
+                    {% if form.email.errors %}
+                     {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors  %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif  %}
+                </div>
+                <div class="form-group">
+                    <!-- label -->
+                    {{ form.password.label(class="form-control-label") }}
+                    <!-- input field -->
+                    <!-- print out errors for wrong input -->
+                    {% if form.password.errors %}
+                     {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors  %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif  %}
+                </div>
+                <div class="form-group">
+                    <!-- label -->
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    <!-- input field -->
+                    <!-- print out errors for wrong input -->
+                    {% if form.confirm_password.errors %}
+                     {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors  %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password(class="form-control form-control-lg") }}
+                    {% endif  %}
+                </div>
+            </fieldset><br>
+            <div class="form-group">
+                <!--submit label -->
+                {{ form.submit(class="btn btn-outline-info") }}
+                
+            </div>
+        </form>
+        <div class=" pt-3">
+            <small class="text-muted">
+                Already Have an Account? <a href="{{ url_for('login') }}" class="mx-2">Log In </a>
+                <!-- {{ login }} is the name of the function not the route -->
+            </small>
+        </div>
+    </div>
+    
+{% endblock %}

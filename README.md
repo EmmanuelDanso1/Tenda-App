@@ -53,9 +53,11 @@ The Mockups of the Tenda Application:
 
 - Mark tasks as completed to keep track of progress.
 
-- Simple and intuitive user interface for a seamless experience
+- Simple and intuitive user interface for a seamless experience.
 
-<!--Technologies used-->
+- Ability to test solution without providing personal details.
+
+<!--Technologies Used-->
 
 ## 🛠 Technologies
 
@@ -84,7 +86,7 @@ The Tenda Application is built using:
 
 - [Live Demo Link]()
 
-<!--Roadmap and future enhancements-->
+<!--Roadmap and Future Enhancements-->
 
 ## 🔭 Future Enhancements
 

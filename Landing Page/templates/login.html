@@ -1,0 +1,66 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="content-section container">
+        <form action="" method="POST">
+            <!-- this enbales crsf -->
+            {{ form.hidden_tag() }}
+            <legend class=" mb-4 text-center">Login to Tenda</legend>
+            <fieldset class="form-group">
+                <div class="form-group">
+                    <!-- label -->
+                    {{ form.email.label(class="form-control-label") }}
+                    <!-- input field -->
+                    <!-- print out errors for wrong input -->
+                    {% if form.email.errors %}
+                     {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors  %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif  %}
+                </div>
+                <div class="form-group">
+                    <!-- label -->
+                    {{ form.password.label(class="form-control-label") }}
+                    <!-- input field -->
+                    <!-- print out errors for wrong input -->
+                    {% if form.password.errors %}
+                     {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors  %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    {% endif  %}
+                </div><br>
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                </div>
+            </fieldset><br>
+            <div class="form-group">
+                <!--submit label -->
+                {{ form.submit(class="btn btn-outline-info") }}
+                
+            </div><br>
+            <!-- forgotten password? click to reset -->
+             <div class="text-muted ml-2">
+                Forgot password?
+                <a href="{{ url_for('reset_password_request') }}">Click to Reset it </a>
+             </div>
+        </form>
+        <div class=" pt-3">
+            <small class="text-muted">
+                Need an Account? <a href="{{ url_for('sign_up') }}" class="mx-2">Sign Up Now </a>
+                <!-- {{ login }} is the name of the function not the route -->
+            </small>
+        </div>
+    </div>
+    
+{% endblock %}

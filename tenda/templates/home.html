@@ -1,9 +1,15 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <h1 class="text-center">Welcome to Tenda!</h1>
-    <h2 class="text-center">This is where you can Manage, Track & Complete your Daily Activities .</h2>
-    <h4 class="text-center">Are you ready?!!!</h4>
-    <h5 class="text-center">Let's go</h5>
-    
+
+  <h1 class="text-center">Welcome to Tenda!</h1>
+  <h2 class="text-center">This is where you can Manage, Track & Complete your Daily Activities .</h2>
+  <h4 class="text-center">Are you ready?!!!</h4>
+  <h5 class="text-center">Let's go</h5>
+  <form action="{{ url_for('login') }}" method="POST">
+    <input type="hidden" name="email" value="tech.kdanso@gmail.com">
+    <input type="hidden" name="password"  value="Maryntiriwa@30"> 
+    <input type="submit" value="Test App">
+  </form>
+
 {% endblock %}

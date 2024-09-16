@@ -41,8 +41,7 @@ def todo():
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if current_user.is_authenticated:
-        return redirect(url_for('home'))
-        
+        return redirect(url_for('home')) 
     form = Sign_UpForm()
     if form.validate_on_submit():
         # hashing password
@@ -58,19 +57,22 @@ def sign_up():
 # login
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    # if user is already authenticated redirect user to todo page
     if current_user.is_authenticated:
         return redirect(url_for('todo'))
-    form = LoginForm()
-    if form.validate_on_submit():
-        # check if form is validated
-        user = User.query.filter_by(email=form.email.data).first()
-        if user and bcrypt.check_password_hash(user.password, form.password.data):
-            login_user(user, remember=form.remember.data)
-            next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('todo'))
+
+    form = LoginForm(request.form)  # Initialize the form with request.form if you're using Flask-WTF
+
+    if request.method == "POST":
+        email = request.form.get('email')
+        password = request.form.get('password')
+        user = User.query.filter_by(email=email).first()
+
+        if user and bcrypt.check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for('todo'))
         else:
-            flash('Login unsuccessful. Please check either email or password', 'danger')
+            flash("Login Unsuccessful. Please check username and password", "danger")
+
     return render_template("login.html", title='Login', form=form)
 
 # logout
@@ -78,6 +80,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
 # update
 @app.route("/update/<int:id>", methods=["GET", "POST"])
 @login_required
@@ -101,24 +104,10 @@ def delete_todo(id):
     todo = Todo.query.get_or_404(id)
     if todo.user_id != current_user.id:
         return "You do not have permission to delete this todo."
-    
     db.session.delete(todo)
     db.session.commit()
     return redirect(url_for('todo'))
 
-# check task complete
-from flask import request, jsonify
-
-@app.route('/complete_todo', methods=['POST'])
-def complete_todo():
-    todo_id = request.json.get('todo_id')
-    todo = Todo.query.get(todo_id)
-    
-    if todo:
-        todo.is_completed = True
-        db.session.commit()
-        return jsonify({"success": True}), 200
-    return jsonify({"success": False}), 400
 
 
 

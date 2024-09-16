@@ -2,14 +2,69 @@
 
 {% block content %}
 
-  <h1 class="text-center">Welcome to Tenda!</h1>
-  <h2 class="text-center">This is where you can Manage, Track & Complete your Daily Activities .</h2>
-  <h4 class="text-center">Are you ready?!!!</h4>
-  <h5 class="text-center">Let's go</h5>
-  <form action="{{ url_for('login') }}" method="POST">
-    <input type="hidden" name="email" value="tech.kdanso@gmail.com">
-    <input type="hidden" name="password"  value="Maryntiriwa@30"> 
-    <input type="submit" value="Test App">
-  </form>
+    <section id="landing">
+      <img src="{{ url_for('static', filename='images/Tenda-site-header-with-tag.jpg') }}" alt="Tenda site cover" class="cover-image">
+      <h1 class="text-center">TENDA boosts performance and keeps you fulfilled by helping you manage and track your important to-dos.</h1>
+    </section>
 
+    <div style="height: 200px;"></div>
+
+    <h2 class="text-center">Manage, Track & Complete your Daily Activities.</h2>
+    <div class="button-container">
+      <a class="button-style" href="">Try App For Free</a>
+    </div>
+
+    <div style="height: 150px;"></div>
+
+    <section id="features">
+      <h2>Key Features</h2>
+        <div class="feature-container">
+          <div class="feature">
+            <img src="{{ url_for('static', filename='images/Create-todo-feature.jpg') }}" alt="Feature 1 Image">
+            <h3>Create Tasks</h3>
+            <p>Create customizable tasks, with detailed descriptions.</p>
+          </div>
+          <div class="feature">
+            <img src="{{ url_for('static', filename='images/update-todo-feature.jpg') }}" alt="Feature 2 Image">
+            <h3>Update Tasks</h3>
+            <p>Ability to update task name and description on the fly, in case you change your mind.</p>
+          </div>
+          <div class="feature">
+            <img src="{{ url_for('static', filename='images/todo-completed-feature.jpg') }}" alt="Feature 3 Image">
+            <h3>Mark Completed</h3>
+            <p>You can mark finished tasks as completed, so you can focus on what's left.</p>
+          </div>
+        </div>
+    </section>
+
+    <div style="height: 150px;"></div>
+
+    <section class="about">
+      <h2 class="text-center">About</h2>
+      <p class="text-center">Tenda was borne out of a desire to create a tool that could help keep track of daily tasks, and also boost productivity. Tenda is from the Swahili word Kutenda which means to do.
+
+        Africans are known for their dedication and work ethic and Tenda was designed with those qualities in mind, it is a tool designed to help you keep track of your daily tasks.</p>
+    </section>
+
+    <section class="team">
+        <h2 class="text-center">Team</h2>
+        <p class="text-center">
+            Emmanuel Danso<br>
+            <a class="links" href="https://github.com/EmmanuelDanso1">GitHub: EmmanuelDanso1</a><br>
+            <br>
+
+            Godman Oluwaseun<br>
+            <a class="links" href="https://github.com/GodmanOluwaseun">GitHub: GodmanOluwaseun</a>
+            <a class="links" href="www.linkedin.com/in/oluwaseuntopeajayi">Linkedin</a>
+            <br>
+
+            Buyeke Obare<br>
+            <a class="links" href="https://github.com/buyekeobare">GitHub: buyekeobare</a><br>
+        </p>
+      </section>
+
+      <section class="repo">
+        <h2 class="text-center">Github Repo</h2>
+        <a class="links" href="https://github.com/EmmanuelDanso1/Tenda-App">Click to Github repo</a>
+      </section>
 {% endblock %}

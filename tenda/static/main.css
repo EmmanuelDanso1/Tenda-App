@@ -140,4 +140,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*  */
+/* media query */
+@media (max-width: 992px) { /* For medium and smaller screens */
+  .cover-image {
+    width: 100%;
+    height: auto;
+  }
+  .feature-container {
+      display: flex;
+      flex-direction: column; /* Change to a row layout for medium screens and smaller */
+  }
+
+  .feature-item {
+      flex: 1;
+      margin-bottom: 20px; /* Adjust margin as needed */
+  }
+}

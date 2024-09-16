@@ -11,7 +11,12 @@
 
     <h2 class="text-center">Manage, Track & Complete your Daily Activities.</h2>
     <div class="button-container">
-      <a class="button-style" href="">Try App For Free</a>
+      <!-- <a class="button-style" href="">Try App For Free</a> -->
+      <form action="{{ url_for('login') }}" method="POST">
+        <input type="hidden" name="email" value="tech.kdanso@gmail.com">
+        <input type="hidden" name="password"  value="Maryntiriwa@30"> 
+        <input type="submit" value="Try App For Free">
+      </form>
     </div>
 
     <div style="height: 150px;"></div>

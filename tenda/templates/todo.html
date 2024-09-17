@@ -38,7 +38,7 @@
                 <td>{{ todo.title }}</td>
                 <td>{{ todo.description }}</td>
                 <td>{{ todo.time.strftime("%Y-%m-%d") }}</td>
-                <td>
+                <td class="actions">
                     <a href="{{ url_for('update_todo', id=todo.id) }}" class="btn btn-sm mx-2 btn-success">Update</a>
 
                     <button type="button" class="btn btn-sm mx-2 btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ todo.id }}">Delete</button>

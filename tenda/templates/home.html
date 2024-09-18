@@ -52,7 +52,7 @@
 
     <section class="team">
         <h2 class="text-center">Team</h2>
-        <p class="text-center">
+        <!-- <p class="text-center">
             Emmanuel Danso<br>
             <a class="links" href="https://github.com/EmmanuelDanso1">GitHub: EmmanuelDanso1</a>
             <a class="links" href="https://www.linkedin.com/in/emmanuel-danso-862566249/">Linkedin</a>
@@ -66,8 +66,44 @@
             Buyeke Obare<br>
             <a class="links" href="https://github.com/buyekeobare">GitHub: buyekeobare</a>
             <a class="links" href="http://www.linkedin.com/in/buyeke-obare/">Linkedin</a>
-        </p>
-      </section>
+        </p> -->
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card  text-dark border-0">
+                <img src="{{ url_for('static', filename='images/Danso.jpeg') }}" class="rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="danso jpeg">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Emmanuel Danso</h5>
+                  <a class="links" href="https://github.com/EmmanuelDanso1">GitHub: EmmanuelDanso1</a>
+                  <a class="links" href="https://www.linkedin.com/in/emmanuel-danso-862566249/">Linkedin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0">
+                <img src="{{ url_for('static', filename='images/Godman.jpeg') }}" class="rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="danso jpeg">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Godman Oluwaseun</h5>
+                  <a class="links" href="https://github.com/GodmanOluwaseun">GitHub: GodmanOluwaseun</a>
+                  <a class="links" href="www.linkedin.com/in/oluwaseuntopeajayi">Linkedin</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0">
+                <img src="{{ url_for('static', filename='images/Linet.jpeg') }}" class="rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="danso jpeg">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Buyeke Obare</h5>
+                  <a class="links" href="https://github.com/buyekeobare">GitHub: buyekeobare</a>
+                  <a class="links" href="http://www.linkedin.com/in/buyeke-obare/">Linkedin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section><br>
 
       <section class="repo">
         <h2 class="text-center">Github Repo</h2>

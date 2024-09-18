@@ -1,9 +1,26 @@
 body {
-  background: #2E2A25;
+  position: relative;
+  background-image: url('images/6-photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #F3D19C;
-  margin: 20px;
-  margin-top: 6rem;
+  /* margin: 20px; */
+  margin-top: 3.7rem;
+  min-height: 100vh; /* Ensure the body takes up full height */
 }
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 42, 37, 0.7); /* Overlay with #2E2A25 color and opacity */
+  z-index: -1; /* Push the overlay behind the content */
+}
+
 
 .card {
   background:none;

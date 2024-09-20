@@ -163,7 +163,18 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   border-color: rgb(255, 0, 43);
 }
-
+.video-file {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 5px solid #F3D19C;
+  border-radius: 10px;
+}
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* media query */
 @media (max-width: 992px) { /* For medium and smaller screens */

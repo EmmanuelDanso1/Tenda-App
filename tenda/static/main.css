@@ -21,7 +21,9 @@ body::before {
   z-index: -1; /* Push the overlay behind the content */
 }
 
-
+.modal-title{
+  color: #461b01;
+}
 .card {
   background:none;
 }
